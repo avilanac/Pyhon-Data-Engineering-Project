@@ -13,7 +13,7 @@ This project demonstrates how to use Python to perform these tasks, showcasing v
 
 ## Skills Acquired
 Through this hands-on lab, the following skills were developed:
-- **Data Extraction**: Collecting data from multiple sources such as APIs, databases, and files.
+- **Data Extraction**: Collecting data from multiple sources such as databases and files.
 - **Data Transformation**: Cleaning, normalizing, and structuring data to meet specific requirements.
 - **Data Loading**: Inserting data into databases or other storage solutions.
 - **Error Handling and Logging**: Implementing error handling and logging mechanisms to ensure the reliability of the ETL process.
