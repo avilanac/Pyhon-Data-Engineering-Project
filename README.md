@@ -1,7 +1,7 @@
 # Hands-on Lab: Extract, Transform, Load (ETL)
 
 ## Overview
-This repository houses a detailed hands-on lab on Extract, Transform, Load (ETL) processes, created as part of the IBM course "Python for Data Engineering Project" on edX. This project aims to apply foundational Python skills to real-world data engineering tasks, emphasizing the importance of ETL in business processes.
+This repository contains a detailed hands-on lab on Extract, Transform, Load (ETL) processes, created as part of the IBM course "Python for Data Engineering Project" on edX. This project aims to apply foundational Python skills to real-world data engineering tasks, emphasizing the importance of ETL in business processes.
 
 ## Project Description
 The ETL process is crucial for data engineering as it involves:
