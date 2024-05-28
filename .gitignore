@@ -1,0 +1,15 @@
+# Virtual enviroment
+venv/
+.env
+
+# Editor configuration files
+.vscode/
+.idea/
+
+# Log files
+logs/
+*.log
+
+# Compiled files
+__pycache__/
+*.pyc
