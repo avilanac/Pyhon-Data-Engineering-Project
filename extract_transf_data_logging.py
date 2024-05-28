@@ -1,6 +1,6 @@
-import glob                         # this module helps in selecting files 
-import pandas as pd                 # this module helps in processing CSV files
-import xml.etree.ElementTree as ET  # this module helps in processing XML files.
+import glob                         
+import pandas as pd                 
+import xml.etree.ElementTree as ET  
 import os
 import logging
 
@@ -31,7 +31,7 @@ def extract_from_xml(file_to_process):
             weight = person.find('weight').text
             data.append({'name': name, 'height': height, 'weight': weight})
     except Exception as e:
-        error_msg = f"Error al procesar el archivo XML {file_to_process}: {e}"
+        error_msg = f"Error processing XML file {file_to_process}: {e}"
         logging.error(error_msg)
         return pd.DataFrame()  # Return empty DataFrame in case of error
     return pd.DataFrame(data)
@@ -51,20 +51,20 @@ def extract():
     for csvfile in glob.glob(os.path.join(data_dir, "*.csv")):
         csv_data = extract_from_csv(csvfile)
         extracted_data = pd.concat([extracted_data, csv_data], ignore_index=True)
-        logging.info(f"Datos extraídos del archivo CSV: {csvfile}")
+        logging.info(f"Data loaded in the CSV file: {csvfile}")
 
     # Process all JSON files
     for jsonfile in glob.glob(os.path.join(data_dir, "*.json")):
         json_data = extract_from_json(jsonfile)
         extracted_data = pd.concat([extracted_data, json_data], ignore_index=True)
-        logging.info(f"Datos extraídos del archivo JSON: {jsonfile}")
+        logging.info(f"Data loaded in the JSON file: {jsonfile}")
     
     # Process all XML fiels
     for xmlfile in os.listdir(data_dir):
         if xmlfile.endswith('.xml'):
             xml_data = extract_from_xml(os.path.join(data_dir, xmlfile))
             extracted_data = pd.concat([extracted_data, xml_data], ignore_index=True)
-            logging.info(f"Datos extraídos del archivo XML: {xmlfile}")
+            logging.info(f"Data loaded in the XML file: {xmlfile}")
         
     return extracted_data
 
